@@ -3,6 +3,7 @@
   Link => https://gustavoguanabara.github.io/javascript/exercicios/
 */
 
+import 'dart:math';
 import 'dart:io';
 
 void exercicio1(num valor) {
@@ -30,6 +31,24 @@ void exercicio7() {
   print("A média final será $media.");
 }
 
-void exercicio4(int valor) {
-  print(valor * valor);
+void exercicio8() {
+  String valor = stdin.readLineSync()!;
+  num numero = num.parse(valor);
+  num valorAbsoluto = numero.abs();
+  int parteInteira = numero.toInt();
+  num inteiroMaisProximo = numero.floor();
+  num raizQuadrada = sqrt(numero);
+  num raizCubica = pow(numero, 1 / 3);
+  num elevado2 = pow(numero, 2);
+  num elevado3 = pow(numero, 3);
+
+  print("O número a ser analisado aqui será o $numero");
+  print("--------------------------");
+  print("O seu valor absoluto é $valorAbsoluto");
+  print("A sua parte inteira é $parteInteira");
+  print("O valor inteiro mais próximo é $inteiroMaisProximo");
+  print("A sua raiz quadrada é $raizQuadrada");
+  print("A sua raiz cúbica é $raizCubica");
+  print("O valor de quadrado de $numero é $elevado2");
+  print("O valor de cubo de $numero é $elevado3");
 }
