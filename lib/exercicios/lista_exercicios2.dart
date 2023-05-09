@@ -48,8 +48,7 @@ void exercicio1() {
 void exercicio5() {
   print("Manipulando números");
 
-  print("Digite o valor");
-
+  stdout.write("Digite o valor");
   num valor = num.parse(stdin.readLineSync()!);
 
   num resultadoDobro = valor * 2;
@@ -61,10 +60,10 @@ void exercicio5() {
 void exercicio6() {
   print("Somando dois números");
 
-  print("Digite o valor 1");
+  stdout.write("Digite o valor 1");
   num valor1 = num.parse(stdin.readLineSync()!);
 
-  print("Digite o valor 2");
+  stdout.write("Digite o valor 2");
   num valor2 = num.parse(stdin.readLineSync()!);
 
   print(valor1 + valor2);
@@ -73,13 +72,13 @@ void exercicio6() {
 void exercicio7() {
   print("Calculando a média de um aluno");
 
-  print("Digite o nome");
+  stdout.write("Digite o nome");
   String nome = stdin.readLineSync()!;
 
-  print("Digite a nota 1");
+  stdout.write("Digite a nota 1");
   num nota1 = num.parse(stdin.readLineSync()!);
 
-  print("Digite a nota 2");
+  stdout.write("Digite a nota 2");
   num nota2 = num.parse(stdin.readLineSync()!);
 
   num media = (nota1 + nota2) / 2;
@@ -92,8 +91,9 @@ void exercicio7() {
 void exercicio8() {
   print("Vários cálculos");
 
-  print("Digite o valor");
+  stdout.write("Digite o valor");
   String valor = stdin.readLineSync()!;
+
   num numero = num.parse(valor);
   num valorAbsoluto = numero.abs();
   int parteInteira = numero.toInt();
@@ -117,13 +117,13 @@ void exercicio8() {
 void exercicio11() {
   print("Calculando média e dando 'Parabéns'");
 
-  print("Digite o nome");
+  stdout.write("Digite o nome");
   String nome = stdin.readLineSync()!;
 
-  print("Digite a nota 1");
+  stdout.write("Digite a nota 1");
   String nota1 = stdin.readLineSync()!;
 
-  print("Digite a nota 2");
+  stdout.write("Digite a nota 2");
   String nota2 = stdin.readLineSync()!;
 
   num media = (num.parse(nota1) + num.parse(nota2)) / 2;
@@ -142,7 +142,7 @@ void exercicio11() {
 void exercicio12() {
   print("É par ou é ímpar?");
 
-  print("Digite o valor");
+  stdout.write("Digite o valor");
   num valor = num.parse(stdin.readLineSync()!);
 
   if (valor % 2 == 0) {
@@ -155,10 +155,10 @@ void exercicio12() {
 void exercicio13() {
   print("Qual é o maior?");
 
-  print("Digite o valor 1");
+  stdout.write("Digite o valor 1");
   num valor1 = num.parse(stdin.readLineSync()!);
 
-  print("Digite o valor 2");
+  stdout.write("Digite o valor 2");
   num valor2 = num.parse(stdin.readLineSync()!);
 
   if (valor1 > valor2) {
@@ -225,7 +225,7 @@ void exercicio18() {
   Random random = Random();
   int numeroAdivinhacao = random.nextInt(100);
 
-  print("Escolha um numero entre 0 e 100");
+  stdout.write("Escolha um numero entre 0 e 100");
   int numeroUsuario = int.parse(stdin.readLineSync()!);
 
   if (numeroAdivinhacao == numeroUsuario) {
@@ -249,10 +249,10 @@ void exercicio19() {
   print("/ - Divisao");
   String operacaoMatematica = stdin.readLineSync()!;
 
-  print("Digite o valor 1");
+  stdout.write("Digite o valor 1");
   num valor1 = num.parse(stdin.readLineSync()!);
 
-  print("Digite o valor 2");
+  stdout.write("Digite o valor 2");
   num valor2 = num.parse(stdin.readLineSync()!);
 
   switch (operacaoMatematica) {
@@ -275,8 +275,9 @@ void exercicio19() {
 void exercicio20() {
   print("Estações do ano");
 
-  print("Digite o numero do mes. (Exemplo: 6)");
+  stdout.write("Digite o numero do mes. (Exemplo: 6)");
   int numeroMes = int.parse(stdin.readLineSync()!);
+
   if (numeroMes >= 1 && numeroMes <= 3) {
     print("Verão");
   } else if (numeroMes >= 4 && numeroMes <= 6) {
@@ -292,6 +293,7 @@ void exercicio20() {
 
 void exercicio21() {
   print("Contando de 1 até 10");
+
   for (var i = 0; i < 10; i++) {
     print(i + 1);
   }
@@ -299,6 +301,7 @@ void exercicio21() {
 
 void exercicio22() {
   print("Contando de 1 até 10 (marcando os pares)");
+
   for (var i = 1; i <= 10; i++) {
     if (i % 2 == 0) {
       print("$i *");
@@ -310,6 +313,7 @@ void exercicio22() {
 
 void exercicio23() {
   print("Contando de 1 até 10 (mostrando só os pares)");
+
   for (var i = 1; i <= 10; i++) {
     if (i % 2 == 0) {
       print(i);
@@ -319,6 +323,7 @@ void exercicio23() {
 
 void exercicio24() {
   print("Contagem regressiva de 10 até 1");
+
   for (var i = 10; i >= 1; i--) {
     print(i);
   }
@@ -327,10 +332,10 @@ void exercicio24() {
 void exercicio25() {
   print("Contagem mais 'inteligente'");
 
-  print("Digite o valor de inicio da contagem");
+  stdout.write("Digite o valor de inicio da contagem");
   int valorInicioContagem = int.parse(stdin.readLineSync()!);
 
-  print("Digite o valor do fim da contagem");
+  stdout.write("Digite o valor do fim da contagem");
   int valorFimContagem = int.parse(stdin.readLineSync()!);
 
   print("Inicio");
@@ -343,7 +348,7 @@ void exercicio25() {
 void exercicio27() {
   print("Tabuada");
 
-  print("Digite o valor");
+  stdout.write("Digite o valor");
   num valor = num.parse(stdin.readLineSync()!);
 
   for (var i = 1; i <= valor; i++) {
@@ -356,7 +361,7 @@ void exercicio27() {
 void exercicio28() {
   print("Fatorial de um número");
 
-  print("Digite o valor");
+  stdout.write("Digite o valor");
   int valor = int.parse(stdin.readLineSync()!);
 
   print(fatorial(valor));
