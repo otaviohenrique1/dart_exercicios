@@ -121,9 +121,9 @@ void exercicio2() {
       "item3": true,
     },
     {
-      "item4": 100,
-      "item5": "teste2",
-      "item6": false,
+      "item1": 100,
+      "item2": "teste2",
+      "item3": false,
     },
   ];
   print(listMap2);
@@ -191,12 +191,41 @@ void exercicio6() {
 }
 
 void exercicio7() {
-  stdout.write("Digite o valor");
+  stdout.write("Digite o valor:");
   num valor = num.parse(stdin.readLineSync()!);
 
   num i = 0;
   while (i <= valor) {
-    print(i * valor);
+    print("$i X $valor = ${i * valor}");
     i++;
+  }
+}
+
+void exercicio8() {
+  List<int> listaNumeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  for (var item in listaNumeros) {
+    print(item);
+  }
+}
+
+void exercicio9() {
+  List<Map<String, dynamic>> listaItems = [
+    {
+      "item1": 99,
+      "item2": "teste1",
+      "item3": true,
+    },
+    {
+      "item1": 100,
+      "item2": "teste2",
+      "item3": false,
+    },
+  ];
+
+  for (var item in listaItems) {
+    print(item["item1"]);
+    print(item["item2"]);
+    print(item["item3"]);
   }
 }
